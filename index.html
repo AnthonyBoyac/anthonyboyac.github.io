@@ -1,12 +1,16 @@
 <html>
 
 <head>
+    <Title>Anthony Boyac's portfolio</Title>
     <meta charset=“UTF-8”>
     <meta name=“viewport” content=“width=device-width, initial-scale=1.0”>
     <meta http-equiv=“X-UA-Compatible” content=“ie=edge”>
+
     <link rel="stylesheet" type="text/css" href="styles/index.css">
 
-    <Title>Anthony Boyac's portfolio</Title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="scripts/index.js"></script>
+
 </head>
 
 <body>
@@ -40,11 +44,11 @@
         <div class="about-container">
             <div class="about-item about-intro">
                 <div class="profile-pic">
-                    <img src="images/programmer-pic.JPG" alt="My profile picture as a programmer.">
+                    <img src="images/professional_headshot_revised.jpg" alt="Profile Picture.">
                 </div>
                 <div class="introduction">
                     I'm a professional front-end developer and an enthusiast Unity developer. I've been
-                    working on personal projects (coming soon) and Freelance.
+                    working on Web Development through Shopify the most, but I'm now working on personal projects and doing Freelance.
                 </div>
             </div>
             <div class="skills-container">
@@ -153,7 +157,12 @@
                     <img src="images/stonescript_resized.jpg">
                 </a>
             </div>
-
+            <div class="project-item">
+                <a href="#">
+                    <div>Cuberunner (coming soon)</div>
+                    <img src="images/unity_logo.jpg">
+                </a>
+            </div>
         </div>
     </section>
 
@@ -163,13 +172,27 @@
         </div>
         <div class="flexbox-container row-2">
             <div class="flexbox-item">
-                <div class="contact-title">Interested in working with me?</div>
+                <div class="contact-title">Wanna work together?</div><br>
+                <div class="contact-text"><a href="https://www.fiverr.com/anthonybyc">Let's do it!</a></div>
             </div>
             <div class="flexbox-item">
-                <div class="contact-title">Any questions?</div>
+                <div class="contact-title">Any questions?</div><br>
+                <div class="contact-text">Contact me on <a
+                        href="https://www.linkedin.com/in/anthony-boyac-421046127/">LinkedIn</a> or by email (down
+                    below).</div>
+                <form action="https://formspree.io/f/xjvpogrl" method="POST">
+
+                    <input type="text" name="_replyto" placeholder="Enter your email">
+                    <br>
+                    <textarea name="message" placeholder="Your message"></textarea>
+
+
+                    <!-- your other form fields go here -->
+
+                    <button type="submit">Send</button>
+                </form>
             </div>
         </div>
-        <!-- Interested to work with me? Check me out on Fiverr. Any question? Contact me on LinkedIn or by email. -->
     </section>
 </body>
 
