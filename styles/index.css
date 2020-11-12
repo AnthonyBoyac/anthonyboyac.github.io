@@ -290,3 +290,27 @@ form button {
   color: inherit;
   background-color: #0300ad;
 }
+
+/* Mobile Responsive */
+@media (min-width: 200px) and (max-width: 430px) {
+
+
+}
+
+@media (min-width: 431px) and (max-width: 1150px) {
+  html {
+    font-size: 1rem;
+  }
+  .intro-text {
+    font-size: 40px;
+  }
+  .skills {
+    margin-top: 40px;
+  }
+  #get-in-touch .flexbox-container {
+    width: 100%;
+  }
+  .project-item {
+    font-size: 2rem;
+  }
+}
