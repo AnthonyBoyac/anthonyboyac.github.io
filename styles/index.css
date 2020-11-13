@@ -292,9 +292,10 @@ form button {
 }
 
 /* Mobile Responsive */
-@media (min-width: 200px) and (max-width: 430px) {
-
-
+@media (max-width: 600px) {
+  .intro-text {
+  font-size: 100px;
+  }
 }
 
 @media (min-width: 431px) and (max-width: 1150px) {
