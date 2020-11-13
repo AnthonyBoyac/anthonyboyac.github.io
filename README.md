@@ -1,2 +1,4 @@
 # My Portfolio
-It's still a work in progress, but you can check it out [here](https://anthonyboyac.github.io/ "Anthony Boyac's portfolio").
+You can access the website [here](https://anthonyboyac.github.io/ "Anthony Boyac's portfolio").
+
+NOTE: Website does not work properly on mobile. I'm working on it, but I apologize for any inconvenience.
