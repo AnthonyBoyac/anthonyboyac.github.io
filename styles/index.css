@@ -299,7 +299,7 @@ form button {
 }
 
 @media (min-width: 601px) and (max-width: 1150px) {
-  html {
+  /* html {
     font-size: 1rem;
   }
   .intro-text {
@@ -313,5 +313,5 @@ form button {
   }
   .project-item {
     font-size: 2rem;
-  }
+  } */
 }
