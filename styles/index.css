@@ -39,11 +39,11 @@ strong {
 
 .section-title {
   text-align: center;
+  font-size: 2.5em;
 }
 
 .section-title h1 {
   font-family: "Courier New", cursive, sans-serif;
-  font-size: 3.5em;
   padding: 60px 0 20px 0;
   color: var(--title-link-color);
 }
@@ -54,13 +54,13 @@ strong {
   justify-content: space-evenly;
   text-align: center;
   margin: auto;
-  width: 80%;
+  width: 90%;
   max-width: 1200px;
 }
 
 .flexbox-item {
   width: 40%;
-  min-width: 450px;
+  min-width: 480px;
 }
 
 /* Menu Header section */
@@ -208,6 +208,15 @@ strong {
   margin-top: 2px;
 }
 
+#doggo-img {
+  width: 220px;
+  height: 160px;
+}
+
+#kitty-img {
+  height: 160px;
+}
+
 /* Projects section */
 .project-item {
   display: flex;
@@ -292,14 +301,41 @@ form button {
 }
 
 /* Mobile Responsive */
-@media (max-width: 600px) {
-  .intro-text {
-  font-size: 100px;
+@media (max-device-width: 600px) {
+  .menu-header-container {
+    font-size: 35px;
+  }
+  .intro-text span {
+    font-size: 48px;
+  }
+  .scroll-down-container {
+    display: none;
+  }
+  #home {
+    height: 50vh;
+  }
+  .section-title {
+    font-size: 3.8em;
+  }
+  .introduction {
+    font-size: 2rem;
+  }
+  .skills {
+    margin-top: 40px;
+  }
+  #projects {
+    height: 35vh;
+  }
+  #get-in-touch {
+    height: 40vh;
+  }
+  #get-in-touch .flexbox-container {
+    width: 100%;
   }
 }
 
-@media (min-width: 601px) and (max-width: 1150px) {
-  /* html {
+@media (min-device-width: 601px) and (max-device-width: 1150px) {
+  html {
     font-size: 1rem;
   }
   .intro-text {
@@ -313,5 +349,5 @@ form button {
   }
   .project-item {
     font-size: 2rem;
-  } */
+  }
 }
