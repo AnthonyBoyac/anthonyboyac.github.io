@@ -303,7 +303,8 @@ form button {
 /* Mobile Responsive */
 @media (max-device-width: 600px) {
   .menu-header-container {
-    font-size: 35px;
+    font-size: 30px;
+    justify-content: space-around;
   }
   .intro-text span {
     font-size: 48px;
@@ -312,7 +313,7 @@ form button {
     display: none;
   }
   #home {
-    height: 50vh;
+    height: 75vh;
   }
   .section-title {
     font-size: 3.8em;
@@ -320,18 +321,42 @@ form button {
   .introduction {
     font-size: 2rem;
   }
+  #about .flexbox-item {
+    width: 90%;
+  } 
   .skills {
     margin-top: 40px;
+    font-size: 2.5em;
+  }
+  .bar-filled {
+    height: 53px;
   }
   #projects {
-    height: 35vh;
+    height: 30vh;
   }
   #get-in-touch {
-    height: 40vh;
+    height: 50vh;
   }
   #get-in-touch .flexbox-container {
     width: 100%;
   }
+  .contact-title, .contact-text a {
+    font-size: 50px;
+  }
+  .contact-text {
+    font-size: 38px;
+  }
+  #get-in-touch .flexbox-item{
+    width: 65%;
+    margin-bottom: 50px;
+  }
+  form input, form textarea {
+    font-size: 30px
+  }
+  form textarea {
+    height: 250px;
+  }
+
 }
 
 @media (min-device-width: 601px) and (max-device-width: 1150px) {
