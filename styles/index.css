@@ -318,8 +318,25 @@ form button {
   .section-title {
     font-size: 3.8em;
   }
+  .section-title h1 {
+    padding: 100px 0 0 0;
+  }
   .introduction {
     font-size: 2rem;
+  }
+  .profile-pic img {
+    width: 50%
+  }
+  .introduction {
+    margin-top: 45px;
+    margin-bottom: 45px; 
+  }
+  #doggo-img {
+    width: 340px;
+    height: 250px;
+  }
+  #kitty-img {
+    height: 250px;
   }
   #about .flexbox-item {
     width: 90%;
