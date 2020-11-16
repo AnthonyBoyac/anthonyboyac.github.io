@@ -106,8 +106,41 @@ strong {
 }
 
 .intro-text span {
+  opacity: 0;
+}
+
+/* Intro text animation */
+.intro-text span:nth-of-type(1) {
+  animation: intro-move 1s linear 1s forwards;
+}
+
+.intro-text span:nth-of-type(2) {
+  animation: intro-move 2s linear 2s forwards;
+}
+
+.intro-text span:nth-of-type(3) {
+  animation: intro-move 2s linear 4s forwards;
+}
+
+.intro-text span:nth-of-type(4) {
+  animation: intro-move 2s linear 6s forwards;
+}
+
+.intro-text span:nth-of-type(5) {
+  animation: intro-move 2s linear 8s forwards;
+}
+
+.intro-text span:nth-of-type(6) {
   font-size: 27px;
   font-family: auto;
+  animation: intro-move 2s linear 10s forwards;
+}
+
+@keyframes intro-move {
+  0% {opacity: 0;}
+  33% {opacity: .33}
+  67% {opacity: .67;}
+  100% {opacity: 1;}
 }
 
 /* Chevron section */
