@@ -18,10 +18,30 @@ $(document).ready(function () {
     }
   });
 
+  /* Hover function for project items */
+  $(".project-item").each(function (index, value) {
+    // need index to start at 1 to get the correct 'nth-of-type' of the class
+    index += 1;
+    // when hovering over this class, do this:
+    $(value).mouseover(function () {
+      document.querySelector(".project-item:nth-of-type(" + index + ") img").classList.add("project-item-hover");
+      $(value).css("background-color", "#1f1f1f");
+      document.querySelector(".project-item:nth-of-type(" + index + ") a").style.display = "block";
+    });
+    // when NOT hovering over this class, do this:
+    $(value).mouseout(function () {
+      document.querySelector(".project-item:nth-of-type(" + index + ") img").classList.remove("project-item-hover");
+      $(value).css("background-color", "initial");
+      document.querySelector(".project-item:nth-of-type(" + index + ") a").style.display = "none";
+    });
+  })
+
+  /* Slide-in animation when scrolling down to anchors' position (in this case: section titles) */
   var sectionId1 = document.querySelector("#about");
   var sectionId2 = document.querySelector("#get-in-touch");
-  var animationItem = "slide-in 2s forwards";
+  var animationItem = "slide-in 1.5s forwards";
 
+  // define variable to observe whether the targeted id element is visible on screen or not
   var observer = new IntersectionObserver(function (entries, observer) {
     entries.forEach(entry => {
       if (entry.isIntersecting == true) {
@@ -38,6 +58,7 @@ $(document).ready(function () {
       }
     })
   });
+  // start observing targeted id element
   observer.observe(sectionId1);
   observer.observe(sectionId2)
 });
