@@ -22,18 +22,31 @@ $(document).ready(function () {
   $(".project-item").each(function (index, value) {
     // need index to start at 1 to get the correct 'nth-of-type' of the class
     index += 1;
+
+    // open popup
+    document.querySelector(".project-item:nth-of-type(" + index + ") .learn-more").addEventListener("click", function () {
+      document.querySelector(".project-item:nth-of-type(" + index + ") .popup-learn-more").style.display = "block";
+    })
+
+    // close popup
+    document.querySelector(".project-item:nth-of-type(" + index + ") .popup-learn-more span").addEventListener("click", function () {
+      document.querySelector(".project-item:nth-of-type(" + index + ") .popup-learn-more").style.display = "none";
+    })
+
     // when hovering over this class, do this:
     $(value).mouseover(function () {
       document.querySelector(".project-item:nth-of-type(" + index + ") img").classList.add("project-item-hover");
       $(value).css("background-color", "#1f1f1f");
-      document.querySelector(".project-item:nth-of-type(" + index + ") a").style.display = "block";
+      document.querySelector(".project-item:nth-of-type(" + index + ") .learn-more").style.display = "block";
+
     });
     // when NOT hovering over this class, do this:
     $(value).mouseout(function () {
       document.querySelector(".project-item:nth-of-type(" + index + ") img").classList.remove("project-item-hover");
       $(value).css("background-color", "initial");
-      document.querySelector(".project-item:nth-of-type(" + index + ") a").style.display = "none";
+      document.querySelector(".project-item:nth-of-type(" + index + ") .learn-more").style.display = "none";
     });
+
   })
 
   /* Slide-in animation when scrolling down to anchors' position (in this case: section titles) */
