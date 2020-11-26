@@ -243,12 +243,6 @@ strong {
   color: var(--title-link-color);
 }
 
-.skill-item span {
-  margin-left: auto;
-  margin-right: 5px;
-  margin-top: 2px;
-}
-
 #doggo-img {
   width: 220px;
   height: 160px;
@@ -261,14 +255,12 @@ strong {
 /* 'About' animation */
 .flexbox-container .flexbox-item:nth-of-type(1) {
   opacity: 0;
-  transform: translateX(-1000px);
-  /* animation: slide-in 3s forwards; */
+  transform: translateX(-100%);
 }
 
 .flexbox-container .flexbox-item:nth-of-type(2) {
   opacity: 0;
-  transform: translateX(1000px);
-  /* animation: slide-in 3s forwards; */
+  transform: translateX(100%);
 }
 
 @keyframes slide-in {
@@ -282,24 +274,95 @@ strong {
 .project-item {
   display: flex;
   position: relative;
-  justify-content: center;
   align-items: center;
   width: 220px;
   height: 200px;
   font-size: 2.3rem;
 }
 
-.project-item img {
-  opacity: 0.4;
+.project-item .title {
+  position: absolute;
+  width: 100%;
+  top: 10%;
+  z-index: 1;
+  cursor: default;
 }
 
-.project-item div {
+.project-item img {
+  opacity: 0.3;
+}
+
+.learn-more {
+  display: none;
   position: absolute;
-  font-weight: bold;
-  color: initial;
-  text-align: center;
+  color: var(--title-link-color);
+  border: 3px solid var(--title-link-color);
+  bottom: 10px;
+  background-color: #50505073;
+  border-radius: 15px;
+  padding: 8px;
+  left: 24px;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.learn-more:hover {
+  background-color: #0c3977;
+}
+
+.project-item-hover {
+  background-color: #424242;
+  opacity: 0.1 !important;
+}
+
+/* Projects popup */
+.popup-learn-more {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 70%;
+  margin: 90px 15%;
+  z-index: 100;
+  height: 85vh;
+  background-color: #171c4e;
+}
+
+.popup-learn-more span:nth-child(1) {
+  position: absolute;
+  font-size: 30px;
+  width: 35px;
+  right: -25px;
+  top: -22px;
+  background-color: #868686;
+  border-radius: 20px;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.popup-learn-more div:nth-of-type(1) {
+  height: 80%;
+}
+
+.popup-learn-more div:nth-of-type(2) {
+  height: 20%;
+}
+
+.popup-learn-more img {
   width: 100%;
-  z-index: 1;
+  height: 100%;
+  opacity: 1;
+}
+
+.popup-learn-more p {
+  font-size: 24px;
+  text-align: left;
+  padding: 15px 15px 0 15px;
+  margin: 0;
+}
+
+.popup-learn-more a {
+  color: var(--title-link-color);
 }
 
 /* Get in Touch section */
