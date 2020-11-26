@@ -18,33 +18,37 @@ $(document).ready(function () {
     }
   });
 
-  /* Hover function for project items */
+  /* Loop through each 'project' item */
   $(".project-item").each(function (index, value) {
-    // need index to start at 1 to get the correct 'nth-of-type' of the class
+    // start at 1 to get the correct 'nth-of-type' of classes
     index += 1;
 
+    var project_item = ".project-item:nth-of-type(" + index;
+
     // open popup
-    document.querySelector(".project-item:nth-of-type(" + index + ") .learn-more").addEventListener("click", function () {
-      document.querySelector(".project-item:nth-of-type(" + index + ") .popup-learn-more").style.display = "block";
+    document.querySelector(project_item + ") .learn-more").addEventListener("click", function () {
+      document.querySelector(project_item + ") .popup-learn-more").style.display = "block";
+      document.querySelector("body").style.overflow = "hidden";
     })
 
     // close popup
-    document.querySelector(".project-item:nth-of-type(" + index + ") .popup-learn-more span").addEventListener("click", function () {
-      document.querySelector(".project-item:nth-of-type(" + index + ") .popup-learn-more").style.display = "none";
+    document.querySelector(project_item + ") .popup-learn-more span:nth-child(1)").addEventListener("click", function () {
+      document.querySelector(project_item + ") .popup-learn-more").style.display = "none";
+      document.querySelector("body").style.overflow = "initial";
     })
 
     // when hovering over this class, do this:
     $(value).mouseover(function () {
-      document.querySelector(".project-item:nth-of-type(" + index + ") img").classList.add("project-item-hover");
+      document.querySelector(project_item + ") img").classList.add("project-item-hover");
       $(value).css("background-color", "#1f1f1f");
-      document.querySelector(".project-item:nth-of-type(" + index + ") .learn-more").style.display = "block";
+      document.querySelector(project_item + ") .learn-more").style.display = "block";
 
     });
     // when NOT hovering over this class, do this:
     $(value).mouseout(function () {
-      document.querySelector(".project-item:nth-of-type(" + index + ") img").classList.remove("project-item-hover");
+      document.querySelector(project_item + ") img").classList.remove("project-item-hover");
       $(value).css("background-color", "initial");
-      document.querySelector(".project-item:nth-of-type(" + index + ") .learn-more").style.display = "none";
+      document.querySelector(project_item + ") .learn-more").style.display = "none";
     });
 
   })
