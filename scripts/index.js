@@ -64,19 +64,20 @@ $(document).ready(function () {
   /* Slide-in animation when scrolling down to anchors' position (in this case: section titles) */
   var sectionId1 = document.querySelector("#about");
   var sectionId2 = document.querySelector("#get-in-touch");
-  var animationItem = "slide-in 1.5s forwards";
+  var slideFromLeft = "slide-from-left 1.5s forwards";
+  var slideFromRight = "slide-from-right 1.5s forwards";
 
   // define variable to observe whether the targeted id element is visible on screen or not
   var observer = new IntersectionObserver(function (entries, observer) {
     entries.forEach(entry => {
       if (entry.isIntersecting == true) {
         if (entry.target.id == "about") {
-          document.querySelector("#about .flexbox-item:nth-of-type(1)").style.animation = animationItem;
-          document.querySelector("#about .flexbox-item:nth-of-type(2)").style.animation = animationItem;
+          document.querySelector("#about .flexbox-item:nth-of-type(1)").style.animation = slideFromLeft;
+          document.querySelector("#about .flexbox-item:nth-of-type(2)").style.animation = slideFromRight;
           observer.unobserve(sectionId1);
         } else if (entry.target.id == "get-in-touch") {
-          document.querySelector("#get-in-touch .flexbox-item:nth-of-type(1)").style.animation = animationItem;
-          document.querySelector("#get-in-touch .flexbox-item:nth-of-type(2)").style.animation = animationItem;
+          document.querySelector("#get-in-touch .flexbox-item:nth-of-type(1)").style.animation = slideFromLeft;
+          document.querySelector("#get-in-touch .flexbox-item:nth-of-type(2)").style.animation = slideFromRight;
           observer.unobserve(sectionId2);
         }
       }

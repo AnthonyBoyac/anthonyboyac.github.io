@@ -249,17 +249,22 @@ strong {
 }
 
 /* 'About' animation */
-.flexbox-container .flexbox-item:nth-of-type(1) {
+@keyframes slide-from-left {
+  from {
   opacity: 0;
   transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+  };
 }
 
-.flexbox-container .flexbox-item:nth-of-type(2) {
-  opacity: 0;
-  transform: translateX(100%);
-}
-
-@keyframes slide-in {
+@keyframes slide-from-right {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
   to {
     transform: translateX(0px);
     opacity: 1;
