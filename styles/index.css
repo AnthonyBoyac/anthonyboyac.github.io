@@ -472,6 +472,9 @@ form button {
   form textarea {
     height: 250px;
   }
+  form button {
+    font-size: 35px;
+  }
 }
 @media (min-device-width: 601px) and (max-device-width: 1150px) {
   html {
