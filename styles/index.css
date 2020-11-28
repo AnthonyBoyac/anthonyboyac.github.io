@@ -293,7 +293,7 @@ strong {
   right: -25px;
   top: -22px;
   background-color: #868686;
-  border-radius: 20px;
+  border-radius: 50px;
   z-index: 10;
   cursor: pointer;
 }
@@ -429,17 +429,24 @@ form button {
     bottom: 40px;
   }
   .popup-learn-more {
-    top: 200px;
-    height: 45vh;
+    width: 90%;
+    margin: 5%;
+    top: 300px;
+    height: 60vh;
   }
   .popup-learn-more p {
-    font-size: 30px;
+    font-size: 40px;
   }
   .popup-learn-more div:nth-of-type(1) {
     height: 45%;
   }
   .popup-learn-more a {
-    left: 23%;
+    left: 28%;
+  }
+  .popup-learn-more span:nth-child(1) {
+    font-size: 60px;
+    width: 75px;
+    top: -53px;
   }
   #get-in-touch {
     height: 70vh;
