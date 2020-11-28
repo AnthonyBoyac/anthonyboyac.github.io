@@ -71,14 +71,10 @@ $(document).ready(function () {
     entries.forEach(entry => {
       if (entry.isIntersecting == true) {
         if (entry.target.id == "about") {
-          document.querySelector("#about .flexbox-item:nth-of-type(1)").style.display = "block";
-          document.querySelector("#about .flexbox-item:nth-of-type(2)").style.display = "block";
           document.querySelector("#about .flexbox-item:nth-of-type(1)").style.animation = animationItem;
           document.querySelector("#about .flexbox-item:nth-of-type(2)").style.animation = animationItem;
           observer.unobserve(sectionId1);
         } else if (entry.target.id == "get-in-touch") {
-          document.querySelector("#get-in-touch .flexbox-item:nth-of-type(1)").style.display = "block";
-          document.querySelector("#get-in-touch .flexbox-item:nth-of-type(2)").style.display = "block";
           document.querySelector("#get-in-touch .flexbox-item:nth-of-type(1)").style.animation = animationItem;
           document.querySelector("#get-in-touch .flexbox-item:nth-of-type(2)").style.animation = animationItem;
           observer.unobserve(sectionId2);
