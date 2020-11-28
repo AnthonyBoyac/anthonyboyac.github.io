@@ -1,9 +1,10 @@
-<html>
+<!DOCTYPE html>
+<html lang="en-US">
 
 <head>
     <Title>Anthony Boyac's portfolio</Title>
     <meta charset=“UTF-8”>
-    <meta name="viewport" content="width=1024, maximum-scale=1, user-scalable=0" />
+    <meta name="viewport" content="width=1024, initial-scale=1, maximum-scale=3"/>
 
     <meta name="author" content="Anthony Boyac">
     <meta name="description"
@@ -11,8 +12,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <link rel="shortcut icon" href="images/favicon.ico">
-    <link rel="stylesheet" type="text/css" href="styles/index.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles/index.css" defer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <script src="scripts/index.js"></script>
 </head>
@@ -141,14 +142,14 @@
         <div class="flexbox-container">
             <div class="project-item">
                 <div class="title">myPanier</div>
-                <img src="images/myPanier_resized.jpg">
+                <img src="images/myPanier_resized.jpg" alt="myPanier package">
                 <div class="learn-more">Learn More</div>
 
                 <div class="popup-learn-more">
                     <div>
                         <span>X</span>
 
-                        <img src="images/myPanier_img1.jpg" />
+                        <img src="images/myPanier_img1.jpg" alt="myPanier slogan"/>
                     </div>
                     <div>
                         <p>
@@ -161,20 +162,20 @@
                             startup had 72% more daily visitors, triple the net income, and decrease in customer service
                             calls.
                         </p>
-                        <a href="https://www.mypanier.com/" target="_blank">Check me out!</a>
+                        <a href="https://www.mypanier.com/" target="_blank" rel="noopener">Check me out!</a>
                     </div>
 
                 </div>
             </div>
             <div class="project-item">
                 <div class="title">StoneScript</div>
-                <img src="images/stonescript_resized.jpg">
+                <img src="images/stonescript_resized.jpg" alt="Stonescript language logo">
                 <div class="learn-more">Learn More</div>
 
                 <div class="popup-learn-more">
                     <div style="background-color: #141517;">
                         <span>X</span>
-                        <img src="images/stonescript_img1.JPG" style="width: 50%;" />
+                        <img src="images/stonescript_img1.JPG" alt="Stonescript language logo and small introduction" style="width: 50%;" />
                     </div>
                     <div>
                         <p>
@@ -187,19 +188,19 @@
 
 
                         </p>
-                        <a href='https://github.com/jlopez616/stonescript' target="_blank">Check me out!</a>
+                        <a href='https://github.com/jlopez616/stonescript' target="_blank" rel="noopener">Check me out!</a>
                     </div>
                 </div>
             </div>
             <div class="project-item">
                 <div class="title">Cuberunner (coming soon)</div>
-                <img src="images/unity_logo.jpg">
+                <img src="images/unity_logo.jpg" alt="Unity logo">
                 <div class="learn-more">Learn More</div>
 
                 <div class="popup-learn-more">
                     <div>
                         <span>X</span>
-                        <img src="images/cuberunner_img1.JPG" />
+                        <img src="images/cuberunner_img1.JPG" alt="Sneak peak for my game"/>
                     </div>
                     <div>
                         <p>
@@ -226,6 +227,7 @@
                 <div class="contact-text"><a href="https://www.fiverr.com/s2/372b9ef7b2">Let's do it!</a></div>
             </div>
             <div class="flexbox-item">
+                <label>
                 <div class="contact-title">Any questions?</div>
                 <div class="contact-text">Contact me on <a
                         href="https://www.linkedin.com/in/anthony-boyac-421046127/">LinkedIn</a> or by email (down
@@ -237,6 +239,8 @@
                     <textarea name="message" placeholder="Your message"></textarea>
                     <button type="submit">Send</button>
                 </form>
+            </label>
+
             </div>
         </div>
     </section>
