@@ -48,16 +48,16 @@ $(document).ready(function () {
         $(value).css("background-color", "#1f1f1f");
         document.querySelector(project_item + ") .learn-more").style.display = "block";
       });
-    // when NOT hovering over this class, do this:
-    $(value).mouseout(function () {
-      document.querySelector(project_item + ") img").classList.remove("project-item-hover");
-      $(value).css("background-color", "initial");
-      document.querySelector(project_item + ") .learn-more").style.display = "none";
-    });
-  } else {
-    document.querySelector(project_item + ") .learn-more").style.display = "block";
-    document.querySelector(project_item + ") .learn-more").style.background = "#0c3977";
-  }
+      // when NOT hovering over this class, do this:
+      $(value).mouseout(function () {
+        document.querySelector(project_item + ") img").classList.remove("project-item-hover");
+        $(value).css("background-color", "initial");
+        document.querySelector(project_item + ") .learn-more").style.display = "none";
+      });
+    } else {
+      document.querySelector(project_item + ") .learn-more").style.display = "block";
+      document.querySelector(project_item + ") .learn-more").style.background = "#0c3977";
+    }
 
   })
 
