@@ -122,21 +122,21 @@ strong {
 }
 
 .intro-text span:nth-of-type(3) {
-  animation: intro-move 2s linear 4s forwards;
+  animation: intro-move 2s linear 3s forwards;
 }
 
 .intro-text span:nth-of-type(4) {
-  animation: intro-move 2s linear 5.5s forwards;
+  animation: intro-move 2s linear 4s forwards;
 }
 
 .intro-text span:nth-of-type(5) {
-  animation: intro-move 2s linear 7s forwards;
+  animation: intro-move 2s linear 5s forwards;
 }
 
 .intro-text span:nth-of-type(6) {
   font-size: 27px;
   font-family: auto;
-  animation: intro-move 2s linear 9s forwards;
+  animation: intro-move 2s linear 7s forwards;
 }
 
 @keyframes intro-move {
@@ -151,7 +151,7 @@ strong {
   position: relative;
   width: 24px;
   height: 24px;
-  animation: intro-move 2s linear 12s forwards;
+  animation: intro-move 2s linear 8s forwards;
 }
 
 .chevron {
@@ -160,15 +160,15 @@ strong {
   height: 8px;
   opacity: 0;
   transform: scale3d(0.5, 0.5, 0.5);
-  animation: move 3s ease-out 12s infinite;
+  animation: move 3s ease-out 8s infinite;
 }
 
 .chevron:first-child {
-  animation: move 3s ease-out 13s infinite;
+  animation: move 3s ease-out 9s infinite;
 }
 
 .chevron:nth-child(2) {
-  animation: move 3s ease-out 14s infinite;
+  animation: move 3s ease-out 10s infinite;
 }
 
 .chevron:before,
@@ -434,6 +434,9 @@ form button {
     font-size: 30px;
     justify-content: space-around;
   }
+  .intro-text span:nth-of-type(6) {
+    font-size: 47px;
+  }
   .intro-text span {
     font-size: 48px;
   }
@@ -444,7 +447,7 @@ form button {
     padding: 100px 0 0 0;
   }
   .introduction {
-    font-size: 2rem;
+    font-size: 3rem;
   }
   .profile-pic img {
     width: 50%
