@@ -1,5 +1,9 @@
 $(document).ready(function () {
-
+  var isTouchScreen = false;
+  if ("ontouchstart" in document.documentElement) {
+    isTouchScreen = true;
+  }
+  console.log(isTouchScreen)
   /* Smooth scroll function when clicking menu anchors */
   $("a").on('click', function (event) {
     if (this.hash !== "") {
@@ -38,18 +42,22 @@ $(document).ready(function () {
     })
 
     // when hovering over this class, do this:
-    $(value).mouseover(function () {
-      document.querySelector(project_item + ") img").classList.add("project-item-hover");
-      $(value).css("background-color", "#1f1f1f");
-      document.querySelector(project_item + ") .learn-more").style.display = "block";
-
-    });
+    if (!isTouchScreen) {
+      $(value).mouseover(function () {
+        document.querySelector(project_item + ") img").classList.add("project-item-hover");
+        $(value).css("background-color", "#1f1f1f");
+        document.querySelector(project_item + ") .learn-more").style.display = "block";
+      });
     // when NOT hovering over this class, do this:
     $(value).mouseout(function () {
       document.querySelector(project_item + ") img").classList.remove("project-item-hover");
       $(value).css("background-color", "initial");
       document.querySelector(project_item + ") .learn-more").style.display = "none";
     });
+  } else {
+    document.querySelector(project_item + ") .learn-more").style.display = "block";
+    document.querySelector(project_item + ") .learn-more").style.background = "#0c3977";
+  }
 
   })
 
@@ -63,11 +71,14 @@ $(document).ready(function () {
     entries.forEach(entry => {
       if (entry.isIntersecting == true) {
         if (entry.target.id == "about") {
-          document.querySelector(".scroll-down-container").style.animation = "scroll-hide 2.5s forwards";
+          document.querySelector("#about .flexbox-item:nth-of-type(1)").style.display = "block";
+          document.querySelector("#about .flexbox-item:nth-of-type(2)").style.display = "block";
           document.querySelector("#about .flexbox-item:nth-of-type(1)").style.animation = animationItem;
           document.querySelector("#about .flexbox-item:nth-of-type(2)").style.animation = animationItem;
           observer.unobserve(sectionId1);
         } else if (entry.target.id == "get-in-touch") {
+          document.querySelector("#get-in-touch .flexbox-item:nth-of-type(1)").style.display = "block";
+          document.querySelector("#get-in-touch .flexbox-item:nth-of-type(2)").style.display = "block";
           document.querySelector("#get-in-touch .flexbox-item:nth-of-type(1)").style.animation = animationItem;
           document.querySelector("#get-in-touch .flexbox-item:nth-of-type(2)").style.animation = animationItem;
           observer.unobserve(sectionId2);
